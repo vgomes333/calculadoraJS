@@ -6,7 +6,7 @@
     <title>Calculadora JavaScript</title>
     <script type="text/javascript" src="js/calcula01.js"></script>
     <script type="text/javascript" src="js/calcula02.js"></script>
-    <script type="text/javascript" src="js/limpa.js"></script>
+    <script type="text/javascript" src="js/calculadoraPorcentagem.js"></script>
 </head>
 
 <body>
@@ -48,6 +48,30 @@
                 <br>
                 <br>
                 <input type="button" value="Calcular" class="botao" onClick="calcular(document.formCalculadora2.operador.value)" />
+                <input type="Reset" value="Limpar Campos">
+            </form>
+        </div>
+    </fieldset>
+    
+    <fieldset style="width:530px; padding:20px; margin: 40px auto;">
+        <legend>Calculadora Porcentagem</legend>
+        <div style="width: 530px;height: 100px;">
+            <form name="formCalculadoraPorcentagem" method="POST" action="">
+                <input type="text" name="valor1" id="valor1" />
+                <select style="width: 50px;" name="operador" id="operador">
+                    <option value="somar">+</option>
+                    <option value="subtrair">-</option>
+                    <option value="multiplicar">*</option>
+                    <option value="dividir">/</option>
+                </select>
+                <input type="text" name="valor2" id="valor2" /><span>%</span>
+                <br>
+                <br>
+                <label for="res">Resultado:</label>
+                <input type="text" name="res" id="resultadoPorcentagem" />
+                <br>
+                <br>
+                <input type="button" value="Calcular" onClick="calcularPorcentagem(document.formCalculadoraPorcentagem.operador.value)" />
                 <input type="Reset" value="Limpar Campos">
             </form>
         </div>
