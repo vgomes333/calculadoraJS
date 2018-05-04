@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Calculadora JavaScript</title>
+    <link rel="stylesheet" href="css/estilos.css">
     <script type="text/javascript" src="js/calcula01.js"></script>
     <script type="text/javascript" src="js/calcula02.js"></script>
     <script type="text/javascript" src="js/calculadoraPorcentagem.js"></script>
 </head>
 
 <body>
-    <fieldset style="width:530px; padding:20px; margin: 40px auto;">
+    <!-- Header -->
+    <div class="cabecalho">
+        <img src="img/logoBilac.png" alt="Logo Faculdade Bilac">
+    </div>
+    <h1>Calculadoras</h1>
+    
+    
+    <!-- Calculadora Sem Operadores -->
+    <fieldset class="fieldCalc">
         <legend>Calculadora sem Operadores</legend>
-        <div style="width: 530px;height: 100px;">
+        <div>
             <form action="" name="formCalculadora1" method="POST">
                 <input type="text" name="valor1" id="valor1" value="">
                 <input type="text" name="operacao" id="operacao" value="">
@@ -23,15 +32,16 @@
                 <input type="text" name="resultado" id="resultado" value="">
                 <br>
                 <br>
-                <input onclick="showElements(this.form)" type="button" name="submit" id="calcular" value="Calcular">
-                <input type="Reset" value="Limpar Campos">
+                <input class="btn-calcular" onclick="showElements(this.form)" type="button" name="submit" id="calcular" value="Calcular">
+                <input class="btn-limpa-campos" type="Reset" value="Limpar Campos">
             </form>
         </div>
     </fieldset>
     
-    <fieldset style="width:530px; padding:20px; margin: 40px auto;">
+    <!-- Calculadora Com Operadores -->
+    <fieldset class="fieldCalc">
         <legend>Calculadora com Operadores</legend>
-        <div style="width: 530px;height: 100px;">
+        <div>
             <form name="formCalculadora2" method="post" action="">
                 <input type="text" name="valor1" id="valor1" />
                 <select style="width: 50px;" name="operador" id="operador">
@@ -47,15 +57,16 @@
                 <input type="text" name="res" id="res" />
                 <br>
                 <br>
-                <input type="button" value="Calcular" class="botao" onClick="calcular(document.formCalculadora2.operador.value)" />
-                <input type="Reset" value="Limpar Campos">
+                <input type="button" value="Calcular" class="btn-calcular" onClick="calcular(document.formCalculadora2.operador.value)" />
+                <input class="btn-limpa-campos" type="Reset" value="Limpar Campos">
             </form>
         </div>
     </fieldset>
     
-    <fieldset style="width:530px; padding:20px; margin: 40px auto;">
+    <!-- Calculadora de Porcentagem -->
+    <fieldset class="fieldCalc">
         <legend>Calculadora Porcentagem</legend>
-        <div style="width: 530px;height: 100px;">
+        <div>
             <form name="formCalculadoraPorcentagem" method="POST" action="">
                 <input type="text" name="valor1" id="valor1" />
                 <select style="width: 50px;" name="operador" id="operador">
@@ -71,11 +82,19 @@
                 <input type="text" name="res" id="resultadoPorcentagem" />
                 <br>
                 <br>
-                <input type="button" value="Calcular" onClick="calcularPorcentagem(document.formCalculadoraPorcentagem.operador.value)" />
-                <input type="Reset" value="Limpar Campos">
+                <input type="button" value="Calcular" class="btn-calcular" onClick="calcularPorcentagem(document.formCalculadoraPorcentagem.operador.value)" />
+                <input class="btn-limpa-campos" type="Reset" value="Limpar Campos">
             </form>
         </div>
     </fieldset>
+    
+    <footer class="rodape">
+        <div class="divFooter">
+            <p>Desenvolvido por: Victor Gomes da Silva</p>
+            <p>Professor: Felipe Freitas</p>
+            <p>Faculdade: Bilac São José dos Campos</p>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+.fieldCalc{
+    width: 600px;
+    margin: 40px auto;
+    @include borda-arredondada;
+
+    input{
+        @include borda-arredondada(0.3em);
+    }
+
+    legend{
+        font-weight: bold;
+    }
+
+    .btn-calcular{
+        @include btnForm;
+        background: $btnCalcBackground;
+        &:hover{
+            background: #0174DF;
+            transition: 0.3s;
+          }
+    }
+
+    .btn-limpa-campos{
+        @include btnForm;
+        background: $btnLimparCamposBackground;
+        &:hover{
+            background: #FA5858;
+            transition: 0.3s;
+        }
+    }
+}
